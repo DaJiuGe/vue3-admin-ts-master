@@ -22,7 +22,7 @@
       </a-form>
       <div class="link">
         <a href="#">忘记密码</a> |
-        <a href="#">注册</a>
+        <router-link to="register">注册</router-link>
       </div>
     </div>
   </div>
