@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
-const routes: Array<RouteRecordRaw> = [
+const accountRoutes: Array<RouteRecordRaw> = [
   {
-    path: "/",
+    path: "/login",
     name: "Login",
     component: () => import("../views/account/Login.vue"),
   },
@@ -11,6 +11,32 @@ const routes: Array<RouteRecordRaw> = [
     name: "Register",
     component: () => import("../views/account/Register.vue"),
   },
+];
+
+const authRoutes: Array<RouteRecordRaw> = [
+  {
+    path: "/404",
+    name: "404",
+    component: () => import("../views/account/Login.vue"),
+  },
+];
+
+export const indexRoutes: Array<RouteRecordRaw> = [
+  {
+    path: "/",
+    name: "Index",
+    component: () => import("../views/index/index.vue"),
+    meta: {
+      icon: "SmileOutlined",
+      title: "首页",
+    },
+  },
+];
+
+const routes: Array<RouteRecordRaw> = [
+  ...accountRoutes,
+  ...authRoutes,
+  ...indexRoutes,
 ];
 
 const router = createRouter({
