@@ -21,22 +21,22 @@ const authRoutes: Array<RouteRecordRaw> = [
   },
 ];
 
-export const indexRoutes: Array<RouteRecordRaw> = [
-  {
-    path: "/",
-    name: "Index",
-    component: () => import("../views/index/index.vue"),
-    meta: {
-      icon: "SmileOutlined",
-      title: "首页",
-    },
-  },
-];
+// export const indexRoutes: Array<RouteRecordRaw> = [
+//   {
+//     path: "/",
+//     name: "Index",
+//     component: () => import("../views/index/index.vue"),
+//     meta: {
+//       icon: "SmileOutlined",
+//       title: "首页",
+//     },
+//   },
+// ];
 
 const routes: Array<RouteRecordRaw> = [
   ...accountRoutes,
   ...authRoutes,
-  ...indexRoutes,
+  // ...indexRoutes,
 ];
 
 const router = createRouter({
